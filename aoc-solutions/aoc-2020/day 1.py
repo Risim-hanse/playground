@@ -7,6 +7,7 @@ def read_puzzle(name: PathLike) -> Set[int]:
     data = set(int(x) for x in content)
   return data
 
+# Θ(N^1.0493) for arbitrary N
 def part1_process(data: Set[int]) -> List[int]:
   conjugate = set(2020-x for x in data if 1010 <= x)
   remainder = data & conjugate
