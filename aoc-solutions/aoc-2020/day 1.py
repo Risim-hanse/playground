@@ -2,7 +2,7 @@ from os import PathLike
 from typing import List, Set
 
 def read_puzzle(name: PathLike) -> Set[int]:
-  with open(name, r) as fp:
+  with open(name, 'r') as fp:
     content = fp.readlines()
     data = set(int(x) for x in content)
   return data
