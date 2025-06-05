@@ -8,7 +8,7 @@ def read_puzzle(name: PathLike) -> Set[int]:
   return data
 
 def part1_process(data: Set[int]) -> List[int]:
-  conjugate = set(2020-x for x in data)
+  conjugate = set(2020-x for x in data if 1010 <= x)
   remainder = data & conjugate
-  result = [(2020-x)* x for x in remainder if 1010 <= x]
+  result = [(2020-x)* x for x in remainder]
   return result
